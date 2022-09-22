@@ -51,8 +51,8 @@ function Index() {
     ffmpeg.FS("writeFile", `input${ext}`, await fetchFile(video));
     // Run the FFmpeg command
 
-    await ffmpeg.run("-i", `input${ext}`, "-af", "loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json", "-f", "null", "-");
     setConverting(true);
+    await ffmpeg.run("-i", `input${ext}`, "-af", "loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json", "-f", "null", "-");
     // await ffmpeg.run("-i", `input${ext}`, "-vn", "-acodec", "copy", "out.aac");
     // await ffmpeg.run("-i", `input${ext}`, "-q:a", "0", "-map", "a", "out.mp3");
     await ffmpeg.run(
@@ -65,6 +65,7 @@ function Index() {
       "out.mp3"
     );
 
+  
     const data = ffmpeg.FS("readFile", "out.mp3");
     ffmpeg.FS("unlink", "out.mp3");
     const name = video.name.replace(/\.[^/.]+$/, "");
