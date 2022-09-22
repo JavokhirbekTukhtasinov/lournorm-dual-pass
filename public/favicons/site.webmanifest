@@ -1,0 +1,22 @@
+{
+  "name": "FFmpeg Audio Extract - Instant video to audio converter.",
+  "short_name": "FFmpeg AE",
+  "description": "A minimalistic web application for instant audio extraction; video to audio conversion. Using FFmpeg.wasm.",
+  "background_color": "#000",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
